@@ -1,0 +1,9 @@
+c:\documents and settings\panchovirt\mis documentos\visual studio 2010\Projects\xmlMIUI\xmlMIUI\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\panchovirt\mis documentos\visual studio 2010\Projects\xmlMIUI\xmlMIUI\obj\x86\Debug\xmlMIUI.frmMain.resources
+c:\documents and settings\panchovirt\mis documentos\visual studio 2010\Projects\xmlMIUI\xmlMIUI\obj\x86\Debug\xmlMIUI.Properties.Resources.resources
+c:\documents and settings\panchovirt\mis documentos\visual studio 2010\Projects\xmlMIUI\xmlMIUI\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\documents and settings\panchovirt\mis documentos\visual studio 2010\Projects\xmlMIUI\xmlMIUI\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\documents and settings\panchovirt\mis documentos\visual studio 2010\Projects\xmlMIUI\xmlMIUI\bin\Debug\xmlMIUI.exe
+c:\documents and settings\panchovirt\mis documentos\visual studio 2010\Projects\xmlMIUI\xmlMIUI\bin\Debug\xmlMIUI.pdb
+c:\documents and settings\panchovirt\mis documentos\visual studio 2010\Projects\xmlMIUI\xmlMIUI\obj\x86\Debug\xmlMIUI.exe
+c:\documents and settings\panchovirt\mis documentos\visual studio 2010\Projects\xmlMIUI\xmlMIUI\obj\x86\Debug\xmlMIUI.pdb
