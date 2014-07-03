@@ -7,3 +7,4 @@ C:\Documents and Settings\PanchoVirt\Mis documentos\Visual Studio 2010\Projects\
 C:\Documents and Settings\PanchoVirt\Mis documentos\Visual Studio 2010\Projects\xmlMerge\xmlMerge\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Documents and Settings\PanchoVirt\Mis documentos\Visual Studio 2010\Projects\xmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.exe
 C:\Documents and Settings\PanchoVirt\Mis documentos\Visual Studio 2010\Projects\xmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.pdb
+C:\Documents and Settings\PanchoVirt\Mis documentos\Visual Studio 2010\Projects\xmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.frmNewString.resources

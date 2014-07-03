@@ -54,6 +54,8 @@
             this.txtAtributo = new System.Windows.Forms.TextBox();
             this.lblAtributo = new System.Windows.Forms.Label();
             this.grpFiles = new System.Windows.Forms.GroupBox();
+            this.lblMostrarCambios = new System.Windows.Forms.Label();
+            this.chkMostrarCambios = new System.Windows.Forms.CheckBox();
             this.gprConfig.SuspendLayout();
             this.grpFiles.SuspendLayout();
             this.SuspendLayout();
@@ -118,7 +120,7 @@
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(328, 365);
+            this.btnGenerar.Location = new System.Drawing.Point(328, 426);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(125, 23);
             this.btnGenerar.TabIndex = 6;
@@ -130,7 +132,7 @@
             // 
             this.lblCount.AutoSize = true;
             this.lblCount.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblCount.Location = new System.Drawing.Point(11, 370);
+            this.lblCount.Location = new System.Drawing.Point(11, 431);
             this.lblCount.Name = "lblCount";
             this.lblCount.Size = new System.Drawing.Size(50, 13);
             this.lblCount.TabIndex = 7;
@@ -140,7 +142,7 @@
             // 
             this.lblContRes.AutoSize = true;
             this.lblContRes.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblContRes.Location = new System.Drawing.Point(67, 370);
+            this.lblContRes.Location = new System.Drawing.Point(67, 431);
             this.lblContRes.Name = "lblContRes";
             this.lblContRes.Size = new System.Drawing.Size(13, 13);
             this.lblContRes.TabIndex = 8;
@@ -168,7 +170,7 @@
             // 
             // txtRuta
             // 
-            this.txtRuta.Location = new System.Drawing.Point(131, 304);
+            this.txtRuta.Location = new System.Drawing.Point(131, 365);
             this.txtRuta.Name = "txtRuta";
             this.txtRuta.ReadOnly = true;
             this.txtRuta.Size = new System.Drawing.Size(271, 20);
@@ -176,7 +178,7 @@
             // 
             // btnRuta
             // 
-            this.btnRuta.Location = new System.Drawing.Point(408, 302);
+            this.btnRuta.Location = new System.Drawing.Point(408, 363);
             this.btnRuta.Name = "btnRuta";
             this.btnRuta.Size = new System.Drawing.Size(31, 23);
             this.btnRuta.TabIndex = 12;
@@ -187,7 +189,7 @@
             // lblRuta
             // 
             this.lblRuta.AutoSize = true;
-            this.lblRuta.Location = new System.Drawing.Point(13, 307);
+            this.lblRuta.Location = new System.Drawing.Point(13, 368);
             this.lblRuta.Name = "lblRuta";
             this.lblRuta.Size = new System.Drawing.Size(96, 13);
             this.lblRuta.TabIndex = 13;
@@ -197,7 +199,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(184, 327);
+            this.label1.Location = new System.Drawing.Point(184, 388);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(269, 13);
             this.label1.TabIndex = 14;
@@ -241,6 +243,8 @@
             // 
             // gprConfig
             // 
+            this.gprConfig.Controls.Add(this.chkMostrarCambios);
+            this.gprConfig.Controls.Add(this.lblMostrarCambios);
             this.gprConfig.Controls.Add(this.label3);
             this.gprConfig.Controls.Add(this.label2);
             this.gprConfig.Controls.Add(this.txtAtributo);
@@ -249,7 +253,7 @@
             this.gprConfig.Controls.Add(this.lblNodo);
             this.gprConfig.Location = new System.Drawing.Point(10, 170);
             this.gprConfig.Name = "gprConfig";
-            this.gprConfig.Size = new System.Drawing.Size(442, 110);
+            this.gprConfig.Size = new System.Drawing.Size(442, 147);
             this.gprConfig.TabIndex = 19;
             this.gprConfig.TabStop = false;
             this.gprConfig.Text = "Configuración";
@@ -297,11 +301,30 @@
             this.grpFiles.TabStop = false;
             this.grpFiles.Text = "Archivos";
             // 
+            // lblMostrarCambios
+            // 
+            this.lblMostrarCambios.AutoSize = true;
+            this.lblMostrarCambios.Location = new System.Drawing.Point(6, 117);
+            this.lblMostrarCambios.Name = "lblMostrarCambios";
+            this.lblMostrarCambios.Size = new System.Drawing.Size(87, 13);
+            this.lblMostrarCambios.TabIndex = 21;
+            this.lblMostrarCambios.Text = "Mostrar cambios:";
+            // 
+            // chkMostrarCambios
+            // 
+            this.chkMostrarCambios.AutoSize = true;
+            this.chkMostrarCambios.Location = new System.Drawing.Point(121, 117);
+            this.chkMostrarCambios.Name = "chkMostrarCambios";
+            this.chkMostrarCambios.Size = new System.Drawing.Size(282, 17);
+            this.chkMostrarCambios.TabIndex = 22;
+            this.chkMostrarCambios.Text = "Marque si desea mostrar cambios antes de aceptarlos.";
+            this.chkMostrarCambios.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 398);
+            this.ClientSize = new System.Drawing.Size(465, 456);
             this.Controls.Add(this.lblMain);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRuta);
@@ -351,6 +374,8 @@
         private System.Windows.Forms.TextBox txtAtributo;
         private System.Windows.Forms.Label lblAtributo;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox chkMostrarCambios;
+        private System.Windows.Forms.Label lblMostrarCambios;
     }
 }
 

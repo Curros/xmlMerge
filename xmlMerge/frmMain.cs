@@ -121,9 +121,23 @@ namespace xmlMerge
                             if (orgName == trName
                                 && xnOrg.InnerText != xnTrad.InnerText)
                             {
+                                if(this.chkMostrarCambios.Checked){
 
-                                xnOrg.InnerText = xnTrad.InnerText;
-                                ++contador; //Suma la cantidad de remplazos
+                                    frmNewString frmNString = new frmNewString(xnOrg.InnerText, xnTrad.InnerText);
+                                    frmNString.ShowDialog();
+                                    
+                                    bool status = frmNString.Status;
+                                    string text = frmNString.newText;
+
+                                    if ( status == true
+                                        || (status == false && text != xnOrg.InnerText) )
+                                    {
+                                        xnOrg.InnerText = xnTrad.InnerText;
+                                        ++contador; //Suma la cantidad de remplazos
+                                    }
+
+                                    frmNString.Dispose();
+                                }
                             }
                         }
 
