@@ -50,10 +50,10 @@
             this.lblNodo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gprConfig = new System.Windows.Forms.GroupBox();
-            this.grpFiles = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtAtributo = new System.Windows.Forms.TextBox();
             this.lblAtributo = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.grpFiles = new System.Windows.Forms.GroupBox();
             this.gprConfig.SuspendLayout();
             this.grpFiles.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             // btnOrg
             // 
-            this.btnOrg.Location = new System.Drawing.Point(396, 16);
+            this.btnOrg.Location = new System.Drawing.Point(396, 20);
             this.btnOrg.Name = "btnOrg";
             this.btnOrg.Size = new System.Drawing.Size(31, 23);
             this.btnOrg.TabIndex = 0;
@@ -75,7 +75,7 @@
             // lblOriginal
             // 
             this.lblOriginal.AutoSize = true;
-            this.lblOriginal.Location = new System.Drawing.Point(6, 21);
+            this.lblOriginal.Location = new System.Drawing.Point(6, 25);
             this.lblOriginal.Name = "lblOriginal";
             this.lblOriginal.Size = new System.Drawing.Size(113, 13);
             this.lblOriginal.TabIndex = 1;
@@ -83,7 +83,7 @@
             // 
             // txtOriginal
             // 
-            this.txtOriginal.Location = new System.Drawing.Point(119, 18);
+            this.txtOriginal.Location = new System.Drawing.Point(119, 22);
             this.txtOriginal.Name = "txtOriginal";
             this.txtOriginal.ReadOnly = true;
             this.txtOriginal.Size = new System.Drawing.Size(271, 20);
@@ -91,7 +91,7 @@
             // 
             // txtTraducido
             // 
-            this.txtTraducido.Location = new System.Drawing.Point(119, 64);
+            this.txtTraducido.Location = new System.Drawing.Point(119, 68);
             this.txtTraducido.Name = "txtTraducido";
             this.txtTraducido.ReadOnly = true;
             this.txtTraducido.Size = new System.Drawing.Size(271, 20);
@@ -100,7 +100,7 @@
             // lblTraducido
             // 
             this.lblTraducido.AutoSize = true;
-            this.lblTraducido.Location = new System.Drawing.Point(6, 67);
+            this.lblTraducido.Location = new System.Drawing.Point(6, 71);
             this.lblTraducido.Name = "lblTraducido";
             this.lblTraducido.Size = new System.Drawing.Size(88, 13);
             this.lblTraducido.TabIndex = 4;
@@ -108,7 +108,7 @@
             // 
             // btnTraducido
             // 
-            this.btnTraducido.Location = new System.Drawing.Point(396, 62);
+            this.btnTraducido.Location = new System.Drawing.Point(396, 66);
             this.btnTraducido.Name = "btnTraducido";
             this.btnTraducido.Size = new System.Drawing.Size(31, 23);
             this.btnTraducido.TabIndex = 3;
@@ -118,7 +118,7 @@
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(328, 361);
+            this.btnGenerar.Location = new System.Drawing.Point(328, 365);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(125, 23);
             this.btnGenerar.TabIndex = 6;
@@ -140,7 +140,7 @@
             // 
             this.lblContRes.AutoSize = true;
             this.lblContRes.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblContRes.Location = new System.Drawing.Point(66, 371);
+            this.lblContRes.Location = new System.Drawing.Point(67, 370);
             this.lblContRes.Name = "lblContRes";
             this.lblContRes.Size = new System.Drawing.Size(13, 13);
             this.lblContRes.TabIndex = 8;
@@ -150,7 +150,7 @@
             // 
             this.lblOrgInfo.AutoSize = true;
             this.lblOrgInfo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblOrgInfo.Location = new System.Drawing.Point(145, 41);
+            this.lblOrgInfo.Location = new System.Drawing.Point(145, 45);
             this.lblOrgInfo.Name = "lblOrgInfo";
             this.lblOrgInfo.Size = new System.Drawing.Size(291, 13);
             this.lblOrgInfo.TabIndex = 9;
@@ -160,7 +160,7 @@
             // 
             this.lblTrInfo.AutoSize = true;
             this.lblTrInfo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblTrInfo.Location = new System.Drawing.Point(165, 87);
+            this.lblTrInfo.Location = new System.Drawing.Point(165, 91);
             this.lblTrInfo.Name = "lblTrInfo";
             this.lblTrInfo.Size = new System.Drawing.Size(271, 13);
             this.lblTrInfo.TabIndex = 10;
@@ -254,22 +254,15 @@
             this.gprConfig.TabStop = false;
             this.gprConfig.Text = "Configuración";
             // 
-            // grpFiles
+            // label3
             // 
-            this.grpFiles.Controls.Add(this.txtTraducido);
-            this.grpFiles.Controls.Add(this.lblTraducido);
-            this.grpFiles.Controls.Add(this.btnTraducido);
-            this.grpFiles.Controls.Add(this.txtOriginal);
-            this.grpFiles.Controls.Add(this.lblOriginal);
-            this.grpFiles.Controls.Add(this.btnOrg);
-            this.grpFiles.Controls.Add(this.lblTrInfo);
-            this.grpFiles.Controls.Add(this.lblOrgInfo);
-            this.grpFiles.Location = new System.Drawing.Point(10, 52);
-            this.grpFiles.Name = "grpFiles";
-            this.grpFiles.Size = new System.Drawing.Size(442, 112);
-            this.grpFiles.TabIndex = 20;
-            this.grpFiles.TabStop = false;
-            this.grpFiles.Text = "groupBox1";
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label3.Location = new System.Drawing.Point(192, 90);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(244, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Copie el nombre del strAtributo a comparar (name).";
             // 
             // txtAtributo
             // 
@@ -287,15 +280,22 @@
             this.lblAtributo.TabIndex = 18;
             this.lblAtributo.Text = "Atributo a comparar:";
             // 
-            // label3
+            // grpFiles
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(204, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Copie el nombre del atributo a comparar (name).";
+            this.grpFiles.Controls.Add(this.txtTraducido);
+            this.grpFiles.Controls.Add(this.lblTraducido);
+            this.grpFiles.Controls.Add(this.btnTraducido);
+            this.grpFiles.Controls.Add(this.txtOriginal);
+            this.grpFiles.Controls.Add(this.lblOriginal);
+            this.grpFiles.Controls.Add(this.btnOrg);
+            this.grpFiles.Controls.Add(this.lblTrInfo);
+            this.grpFiles.Controls.Add(this.lblOrgInfo);
+            this.grpFiles.Location = new System.Drawing.Point(10, 52);
+            this.grpFiles.Name = "grpFiles";
+            this.grpFiles.Size = new System.Drawing.Size(442, 112);
+            this.grpFiles.TabIndex = 20;
+            this.grpFiles.TabStop = false;
+            this.grpFiles.Text = "Archivos";
             // 
             // frmMain
             // 

@@ -71,7 +71,7 @@ namespace xmlMerge
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            string strNode = "", atributo = "" ;
+            string strNode = "", strAtributo = "" ;
             int contador = 0;
             
             if ( this.txtOriginal.Text != null && this.txtTraducido.Text != null )
@@ -88,6 +88,7 @@ namespace xmlMerge
                     OriginalDoc.Load(this.txtOriginal.Text);
                     TraducidoDoc.Load(this.txtTraducido.Text);
 
+                    // Verificamos si se seteo un nodo.
                     if (this.txtNodo.Text.Length > 1)
                     {
                         strNode = this.txtNodo.Text;
@@ -100,21 +101,22 @@ namespace xmlMerge
                     XmlNodeList stringOrgNode = OriginalDoc.SelectNodes(strNode);
                     XmlNodeList stringTrgNode = TraducidoDoc.SelectNodes(strNode);
 
+                    // Verificamos si se seteo un atributo.
                     if (this.txtAtributo.Text.Length > 1)
                     {
-                        atributo = this.txtAtributo.Text;
+                        strAtributo = this.txtAtributo.Text;
                     }
                     else
                     {
-                        atributo = "name";
+                        strAtributo = "name";
                     }
 
                     foreach ( XmlNode xnOrg in stringOrgNode  ) {
                         string temp = xnOrg.InnerText;
-                        string orgName = xnOrg.Attributes["name"].Value;
+                        string orgName = xnOrg.Attributes[strAtributo].Value;
 
                         foreach (XmlNode xnTrad in stringTrgNode) {
-                            string trName = xnTrad.Attributes["name"].Value;
+                            string trName = xnTrad.Attributes[strAtributo].Value;
 
                             if (orgName == trName
                                 && xnOrg.InnerText != xnTrad.InnerText)
@@ -134,7 +136,7 @@ namespace xmlMerge
                     } else {
                         filepath = this.txtOriginal.Text;
                         filepath = filepath.Substring(0, filepath.Length - 4);
-                        filepath = filepath + "2.xml";
+                        filepath = filepath + "_2.xml";
                     }
 
                     OriginalDoc.Save( filepath );
