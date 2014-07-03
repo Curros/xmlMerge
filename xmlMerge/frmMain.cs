@@ -71,6 +71,7 @@ namespace xmlMerge
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            string strNode = "", atributo = "" ;
             int contador = 0;
             
             if ( this.txtOriginal.Text != null && this.txtTraducido.Text != null )
@@ -87,8 +88,26 @@ namespace xmlMerge
                     OriginalDoc.Load(this.txtOriginal.Text);
                     TraducidoDoc.Load(this.txtTraducido.Text);
 
-                    XmlNodeList stringOrgNode = OriginalDoc.SelectNodes(@"/resources/string");
-                    XmlNodeList stringTrgNode = TraducidoDoc.SelectNodes(@"/resources/string");
+                    if (this.txtNodo.Text.Length > 1)
+                    {
+                        strNode = this.txtNodo.Text;
+                    }
+                    else {
+                        strNode = @"/resources/string";
+                    }
+
+
+                    XmlNodeList stringOrgNode = OriginalDoc.SelectNodes(strNode);
+                    XmlNodeList stringTrgNode = TraducidoDoc.SelectNodes(strNode);
+
+                    if (this.txtAtributo.Text.Length > 1)
+                    {
+                        atributo = this.txtAtributo.Text;
+                    }
+                    else
+                    {
+                        atributo = "name";
+                    }
 
                     foreach ( XmlNode xnOrg in stringOrgNode  ) {
                         string temp = xnOrg.InnerText;
@@ -105,11 +124,12 @@ namespace xmlMerge
                                 ++contador; //Suma la cantidad de remplazos
                             }
                         }
+
                     }
 
                     // Verificamos si proporciona una ruta para salvar el archivo.
                     string filepath;
-                    if (this.txtRuta.Text != null){
+                    if (this.txtRuta.Text != null && this.txtRuta.Text.Length > 1){
                         filepath = this.txtRuta.Text;
                     } else {
                         filepath = this.txtOriginal.Text;
