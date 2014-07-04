@@ -50,12 +50,12 @@
             this.lblNodo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gprConfig = new System.Windows.Forms.GroupBox();
+            this.chkMostrarCambios = new System.Windows.Forms.CheckBox();
+            this.lblMostrarCambios = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtAtributo = new System.Windows.Forms.TextBox();
             this.lblAtributo = new System.Windows.Forms.Label();
             this.grpFiles = new System.Windows.Forms.GroupBox();
-            this.lblMostrarCambios = new System.Windows.Forms.Label();
-            this.chkMostrarCambios = new System.Windows.Forms.CheckBox();
             this.gprConfig.SuspendLayout();
             this.grpFiles.SuspendLayout();
             this.SuspendLayout();
@@ -258,6 +258,25 @@
             this.gprConfig.TabStop = false;
             this.gprConfig.Text = "Configuración";
             // 
+            // chkMostrarCambios
+            // 
+            this.chkMostrarCambios.AutoSize = true;
+            this.chkMostrarCambios.Location = new System.Drawing.Point(121, 117);
+            this.chkMostrarCambios.Name = "chkMostrarCambios";
+            this.chkMostrarCambios.Size = new System.Drawing.Size(282, 17);
+            this.chkMostrarCambios.TabIndex = 22;
+            this.chkMostrarCambios.Text = "Marque si desea mostrar cambios antes de aceptarlos.";
+            this.chkMostrarCambios.UseVisualStyleBackColor = true;
+            // 
+            // lblMostrarCambios
+            // 
+            this.lblMostrarCambios.AutoSize = true;
+            this.lblMostrarCambios.Location = new System.Drawing.Point(6, 117);
+            this.lblMostrarCambios.Name = "lblMostrarCambios";
+            this.lblMostrarCambios.Size = new System.Drawing.Size(87, 13);
+            this.lblMostrarCambios.TabIndex = 21;
+            this.lblMostrarCambios.Text = "Mostrar cambios:";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -301,25 +320,6 @@
             this.grpFiles.TabStop = false;
             this.grpFiles.Text = "Archivos";
             // 
-            // lblMostrarCambios
-            // 
-            this.lblMostrarCambios.AutoSize = true;
-            this.lblMostrarCambios.Location = new System.Drawing.Point(6, 117);
-            this.lblMostrarCambios.Name = "lblMostrarCambios";
-            this.lblMostrarCambios.Size = new System.Drawing.Size(87, 13);
-            this.lblMostrarCambios.TabIndex = 21;
-            this.lblMostrarCambios.Text = "Mostrar cambios:";
-            // 
-            // chkMostrarCambios
-            // 
-            this.chkMostrarCambios.AutoSize = true;
-            this.chkMostrarCambios.Location = new System.Drawing.Point(121, 117);
-            this.chkMostrarCambios.Name = "chkMostrarCambios";
-            this.chkMostrarCambios.Size = new System.Drawing.Size(282, 17);
-            this.chkMostrarCambios.TabIndex = 22;
-            this.chkMostrarCambios.Text = "Marque si desea mostrar cambios antes de aceptarlos.";
-            this.chkMostrarCambios.UseVisualStyleBackColor = true;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,6 +336,7 @@
             this.Controls.Add(this.grpFiles);
             this.Controls.Add(this.gprConfig);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Añadir valores traducidos al XML";
             this.gprConfig.ResumeLayout(false);
             this.gprConfig.PerformLayout();

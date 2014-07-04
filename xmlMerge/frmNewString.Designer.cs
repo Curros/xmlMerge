@@ -35,6 +35,7 @@
             this.lblNuevo = new System.Windows.Forms.Label();
             this.btnOriginal = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.chkShow = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblStrOrg
@@ -101,11 +102,24 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // chkShow
+            // 
+            this.chkShow.AutoSize = true;
+            this.chkShow.Location = new System.Drawing.Point(300, 12);
+            this.chkShow.Name = "chkShow";
+            this.chkShow.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkShow.Size = new System.Drawing.Size(201, 17);
+            this.chkShow.TabIndex = 22;
+            this.chkShow.Text = "¿No volver a mostrar este formulario?";
+            this.chkShow.UseVisualStyleBackColor = true;
+            this.chkShow.CheckedChanged += new System.EventHandler(this.chkShow_CheckedChanged);
+            // 
             // frmNewString
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 220);
+            this.Controls.Add(this.chkShow);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnOriginal);
             this.Controls.Add(this.txtNuevo);
@@ -114,6 +128,7 @@
             this.Controls.Add(this.lblFrm);
             this.Controls.Add(this.lblStrOrg);
             this.Name = "frmNewString";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Texto a editar";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,5 +144,6 @@
         private System.Windows.Forms.Label lblNuevo;
         private System.Windows.Forms.Button btnOriginal;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.CheckBox chkShow;
     }
 }

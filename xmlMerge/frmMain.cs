@@ -111,6 +111,8 @@ namespace xmlMerge
                         strAtributo = "name";
                     }
 
+                    frmNewString frmNString = new frmNewString();
+
                     foreach ( XmlNode xnOrg in stringOrgNode  ) {
                         string temp = xnOrg.InnerText;
                         string orgName = xnOrg.Attributes[strAtributo].Value;
@@ -121,26 +123,27 @@ namespace xmlMerge
                             if (orgName == trName
                                 && xnOrg.InnerText != xnTrad.InnerText)
                             {
-                                if(this.chkMostrarCambios.Checked){
+                                if (this.chkMostrarCambios.Checked && !frmNString.neverAsk)
+                                {
+                                    // Paso el texto a comparar
+                                    frmNString.nuevosTextos(xnOrg.InnerText, xnTrad.InnerText);
 
-                                    frmNewString frmNString = new frmNewString(xnOrg.InnerText, xnTrad.InnerText);
                                     frmNString.ShowDialog();
-                                    
-                                    bool status = frmNString.Status;
-                                    string text = frmNString.newText;
 
-                                    if ( status == true
-                                        || (status == false && text != xnOrg.InnerText) )
+                                    if (frmNString.Status == true)
                                     {
-                                        xnOrg.InnerText = xnTrad.InnerText;
-                                        ++contador; //Suma la cantidad de remplazos
+                                        xnOrg.InnerText = frmNString.newText; 
                                     }
 
-                                    frmNString.Dispose();
+                                }
+                                else {
+                                    xnOrg.InnerText = xnTrad.InnerText;
+                                    ++contador; //Suma la cantidad de remplazos
                                 }
                             }
                         }
 
+                        //frmNString.Dispose();
                     }
 
                     // Verificamos si proporciona una ruta para salvar el archivo.
