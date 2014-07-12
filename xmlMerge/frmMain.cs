@@ -86,10 +86,17 @@ namespace xmlMerge
             if (this.rbStrings.Checked)
             {
                 this.gprConfig.Enabled = true;
+                this.chkMostrarCambios.Enabled = true;
             }
             else
             {
                 this.gprConfig.Enabled = false;
+                this.chkMostrarCambios.Enabled = false;
+                
+                //Cleaning
+                this.chkMostrarCambios.Checked = false;
+                this.txtNodo.Text = "";
+                this.txtAtributo.Text = "";
             }
         }
 
@@ -298,6 +305,47 @@ namespace xmlMerge
         private int xmlPlurals(XmlDocument OriginalDoc, XmlDocument TraducidoDoc)
         {
             int contador = 0;
+            string strNode = @"/resources/plurals";
+            string strAtributo = "name";
+
+            XmlNodeList stringOrgNode = OriginalDoc.SelectNodes(strNode);
+            XmlNodeList stringTrgNode = TraducidoDoc.SelectNodes(strNode);
+
+            // Recorremos el conjunto de nodos en el archivo original.
+            foreach (XmlNode xnOrg in stringOrgNode)
+            {
+                string orgName = xnOrg.Attributes[strAtributo].Value; // Valor del atributo del nodo plurals.
+
+                foreach (XmlNode xnTrad in stringTrgNode)
+                {
+                    string trName = xnTrad.Attributes[strAtributo].Value; // Valor del atributo del nodo plurals.
+
+                    // Se verifica que los nodos plurals tengan el mismo nombre.
+                    if (orgName == trName)
+                    {
+                        // Iteramos los nodos dentro del plurals, items
+                        foreach (XmlNode xnOrgSubNode in xnOrg)
+                        {
+                            foreach (XmlNode xnTrSubNode in xnTrad)
+                            {
+                                if( xnOrgSubNode.Attributes["quantity"].Value == xnTrSubNode.Attributes["quantity"].Value ){
+
+                                    xnOrgSubNode.InnerText = xnTrSubNode.InnerText;
+
+                                    ++contador; //Suma la cantidad de remplazos
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+            if (contador > 0)
+            {
+                // Se guarda el archivo xml nuevo.
+                OriginalDoc.Save(this.txtRuta.Text);
+            }
 
             return contador;
         }

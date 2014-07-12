@@ -294,7 +294,6 @@
             // 
             // chkMostrarCambios
             // 
-            this.chkMostrarCambios.AutoSize = true;
             this.chkMostrarCambios.Location = new System.Drawing.Point(129, 301);
             this.chkMostrarCambios.Name = "chkMostrarCambios";
             this.chkMostrarCambios.Size = new System.Drawing.Size(287, 17);
