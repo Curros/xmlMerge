@@ -8,3 +8,12 @@ C:\Documents and Settings\PanchoVirt\Mis documentos\Visual Studio 2010\Projects\
 C:\Documents and Settings\PanchoVirt\Mis documentos\Visual Studio 2010\Projects\xmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.exe
 C:\Documents and Settings\PanchoVirt\Mis documentos\Visual Studio 2010\Projects\xmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.pdb
 C:\Documents and Settings\PanchoVirt\Mis documentos\Visual Studio 2010\Projects\xmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.frmNewString.resources
+C:\Users\Pancho\Documents\Visual Studio 2013\Projects\XmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.exe
+C:\Users\Pancho\Documents\Visual Studio 2013\Projects\XmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.pdb
+C:\Users\Pancho\Documents\Visual Studio 2013\Projects\XmlMerge\xmlMerge\bin\Debug\xmlMerge.exe
+C:\Users\Pancho\Documents\Visual Studio 2013\Projects\XmlMerge\xmlMerge\bin\Debug\xmlMerge.pdb
+C:\Users\Pancho\Documents\Visual Studio 2013\Projects\XmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.csprojResolveAssemblyReference.cache
+C:\Users\Pancho\Documents\Visual Studio 2013\Projects\XmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.frmMain.resources
+C:\Users\Pancho\Documents\Visual Studio 2013\Projects\XmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.frmNewString.resources
+C:\Users\Pancho\Documents\Visual Studio 2013\Projects\XmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.Properties.Resources.resources
+C:\Users\Pancho\Documents\Visual Studio 2013\Projects\XmlMerge\xmlMerge\obj\x86\Debug\xmlMerge.csproj.GenerateResource.Cache

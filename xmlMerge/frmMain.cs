@@ -266,6 +266,30 @@ namespace xmlMerge
             {
                 string orgName = xnOrg.Attributes[strAtributo].Value; // Valor del atributo del nodo.
 
+                foreach (XmlNode xnTrad in stringTrgNode)
+                {
+                    string trName = xnTrad.Attributes[strAtributo].Value; // Valor del atributo del nodo.
+
+                    // Se verifica que los nodos tengan el mismo nombre y contengan los mismos items.
+                    if (orgName == trName && xnOrg.ChildNodes.Count == xnTrad.ChildNodes.Count)
+                    {
+
+                        foreach (XmlNode xnOrgSubNode in xnOrg)
+                        {
+                            xnOrgSubNode.InnerText = xnTrad.FirstChild.InnerText;
+                            //Eliminamos el primero para no reiterar.
+                            xnTrad.RemoveChild(xnTrad.FirstChild);
+                        }
+
+                        ++contador; //Suma la cantidad de remplazos
+                    }
+                }
+            }
+
+            if (contador > 0)
+            {
+                // Se guarda el archivo xml nuevo.
+                OriginalDoc.Save(this.txtRuta.Text);
             }
 
             return contador;
