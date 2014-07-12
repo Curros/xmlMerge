@@ -29,6 +29,7 @@ namespace xmlMerge
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.Multiselect = false;
 
+
             // Process input if the user clicked OK.
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
